@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+header {
+    background-color: olivedrab;
+}
+
+main {
+    background-color: aliceblue;
+}
+
+footer {
+    background-color: olive;
+}
