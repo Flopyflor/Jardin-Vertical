@@ -1,9 +1,41 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0px;
 }
 header {
     background-color: olivedrab;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    position: fixed;
+    width: 100vw;
+    padding: 2px;
+}
+
+.espacio-nav {
+    height: 10vh;
+}
+
+nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+}
+
+nav li {
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 main {
@@ -12,4 +44,32 @@ main {
 
 footer {
     background-color: olive;
+}
+
+section {
+    width: 100%;
+}
+
+section#title-card {
+    height: 100vh;
+    background-color: brown;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.info {
+    padding: 20px;
+}
+
+/*
+Tengo ganas de, usando nth-child, hacer que algunos info esten alineados a la derecha
+*/
+
+.info p {
+    padding: 20px;
 }
