@@ -25,13 +25,118 @@
         <section class="info">
             <h1>Sobre nosotros</h1>
             <div class="info-content">
-                <p>Algo más sobre "nosotros", para que no quede tan vacío</p>
+                <p>Nuestra empresa se creó el 11 de Septiembre de 2021, y desde entonces hemos trabajado en brindar instalaciones de jardines verticales de la mayor calidad.
+                    Parte de nuestro modelo se basa en la relación con el cliente. Por eso sugerimos que te pongas en contacto con nosotros: completá el formulario!
+                </p>
             </div>
         </section>
+
+
         <section class="info">
             <h1>Suscribite para no perderte de nada!</h1>
+            <p>Los campos marcados con * son obligatorios</p>
             <div class="info-form">        
-                <p>bienvenido! acá tenés un form para ponerte en contacto con nosotros idk. Esto tiene sentido?</p>
+                <form action="/form.php" method="post">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        
+                        <p>
+                            <label for="nombre">Nombre*:</label>
+                            <input id="nombre" type="text" required/>
+                        </p>
+                        
+                        <p>
+                            <label for="apellido">Apellido:</label>
+                            <input id="apellido" type="text"/>
+                        </p>
+                        
+                        <p>
+                            <label for="edad">Fecha de nacimiento:</label>
+                            <input id="edad" type="date"/>
+                        </p>
+                        
+                        <p>Género
+                            <div class="option-group">
+                                <div class="option">
+                                    <input type="radio" name="género" id="hombre">
+                                    <label for="hombre">Hombre</label>
+                                </div>
+                                    
+                                <div class="option">
+                                    <input type="radio" name="género" id="mujer">
+                                    <label for="mujer">Mujer</label>
+                                </div>
+
+                                <div class="option">
+                                    <input type="radio" name="género" id="otro">
+                                    <label for="otro">Prefiero no decir</label>
+                                </div>
+                            </div>
+                        </p>
+
+                        <p>
+                            <label for="idioma">Idioma:</label>
+                            <select name="idioma" id="idioma">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                                <option value="fr">Françai</option>
+                            </select>
+                        </p> 
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos de contacto</legend>
+                        
+                        <p>
+                            <label for="mail">Mail*:</label>
+                            <input id="mail" type="email" required/>
+                        </p>
+
+                        <p>
+                            <label for="pagina">Página web personal:</label>
+                            <input id="pagina" type="url"/>
+                        </p>
+
+                        <p>
+                            <label for="telefono">Número de teléfono:</label>
+                            <input id="telefono" type="tel" placeholder="+54 911 1234 1234"/>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Para personalizar tu experiencia</legend>
+                        <p>
+                            <label for="color">Color favorito:</label>
+                            <input id="color" type="color"/>
+                        </p>
+
+                        <p>Intereses:
+                            <div class="option-group">
+                                <div class="option">
+                                    <input type="checkbox" name="flor" id="flor" value="flor">
+                                    <label for="flor">Plantas de flores</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" name="hoja" id="hoja" value="hoja">
+                                    <label for="hoja">Plantas de hojas</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" name="enredadera" id="enredadera" value="enredadera">
+                                    <label for="enredadera">Enredaderas</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" name="instalaciones" id="instalaciones" value="instalaciones">
+                                    <label for="instalaciones">Instalaciones de jardines verticales</label>
+                                </div>
+                            </div>                            
+                        </p>
+
+                        <p>Comentarios: <br>
+                            <textarea name="comentarios" id="comentarios" cols="30" rows="10">Deje sus comentarios aquí...</textarea>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Hecho">
+                    <input type="reset" value="Borrar">
+                </form>
             </div>
         </section>
     </main>
