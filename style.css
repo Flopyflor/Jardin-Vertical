@@ -6,18 +6,27 @@
 
 /* Común a todas las páginas */
 header {
-    background-color: olivedrab;
+    background-color: #62e59d;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    width: 100vw;
-    padding: 1px 10px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 1px 15px;
+    z-index: 2;
 }
 
-.espacio-nav {
-    height: 10vh;
+header h1 {
+    font-family: 'Lucida handwriting', 'comic sans', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
 }
 
 nav ul{
@@ -30,6 +39,18 @@ nav li {
     padding: 20px;
     margin: 5px;
     border: 1px solid black;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+nav a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav li:hover {
+    color:rgb(114, 21, 142);
+    background-color: #7fffb8;
 }
 
 footer {
@@ -38,11 +59,15 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: olive;
+    background-color: olivedrab;
 }
 
 main {
-    background-color: aliceblue;
+    background-color: rgb(255, 246, 252);
+}
+
+main h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 section {
@@ -60,17 +85,96 @@ section {
 /* Página index */
 section#title-card {
     height: 100vh;
-    background-color: brown;
+    background-color: rgb(220, 156, 240);
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
 #title {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lucida handwriting', 'comic sans', sans-serif;
 }
 
 /*
-Tengo ganas de, usando nth-child, hacer que algunos info esten alineados a la derecha
+Tengo ganas de, usando nth-child, hacer que algunos info esten alineados a la derecha. maybe
 */
 
+/* Contacto */
+
+form {
+    border: 3px solid salmon;
+    border-radius: 5px;
+    margin: 0px 20px;
+    padding: 10px;
+}
+
+fieldset {
+    border-radius: 5px;
+    border: 3px solid palevioletred;
+}
+
+fieldset+fieldset, .form-btns{
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="url"], textarea{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.option-group{ 
+    margin-left: 20px;
+}
+
+.form-btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="submit"], input[type="reset"] {
+    flex-grow: 1;
+}
+
+/* Productos */
+
+.product-card {
+    border: 1px solid black;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 1s, background-color 1s;
+    color: black;
+    text-decoration: none;
+}
+
+.product-card:hover {
+    background-color: #e2e2e2;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.product-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-card img {
+    width: inherit;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.product-card h3 {
+    padding: 10px;
+}
+
+.product-card p {
+    padding-top: 0px;
+}
+
+.product-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px 20px;
+}
