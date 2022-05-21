@@ -2,24 +2,29 @@
 * {
     box-sizing: border-box;
     margin: 0px;
+    --header-height: 5em;
+    --nav-font:  Verdana, Geneva, Tahoma, sans-serif;
+    --nav-font-size: 1em;
 }
 
 /* Común a todas las páginas */
 header {
-    background-color: #62e59d;
+    background-color: #96e7bb;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+    align-content: center;
     position: sticky;
     top: 0px;
     left: 0px;
     padding: 5px 15px;
     z-index: 2;
+    height: var(--header-height);
 }
 
-header h1 {
-    font-family: 'Lucida handwriting', 'comic sans', sans-serif;
+h1 {
+    font-family: 'Smooch', cursive;
     color: black;
     text-decoration: none;
 }
@@ -46,17 +51,24 @@ button, button:hover, button:focus {
     border: none;
     background-color: #00000000;
     outline: none;
+    font-family: var(--nav-font);
+    font-size: var(--nav-font-size);
 }
 
 nav a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--nav-font);
     text-decoration: none;
     color: inherit;
+    font-size: var(--nav-font-size);
 }
 
 nav li:hover {
     color:rgb(114, 21, 142);
-    background-color: #7fffb8;
+    background-color: #b8f7d4;
+}
+
+a {
+    color: #34014a;
 }
 
 footer {
@@ -65,12 +77,17 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #62e59d;
+    background-color: #389f62;
     text-align: center;
 }
 
 main {
-    background-color: rgb(255, 246, 252);
+    background-color: rgb(247, 237, 243);
+}
+
+::selection {
+    background-color: purple;
+    color: white;
 }
 
 main h2 {
@@ -86,12 +103,12 @@ section {
 }
 
 .info p {
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 /* Página index */
 section#title-card {
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
     background-color: rgb(220, 156, 240);
     justify-content: center;
     align-items: center;
@@ -99,12 +116,42 @@ section#title-card {
 }
 
 #title {
-    font-family: 'Lucida handwriting', 'comic sans', sans-serif;
+    color: #00000000;
+    font-size: 4rem;
+    text-align: center;
+    animation: fade-in 2s linear 0.5s 1 forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        color: #00000000;
+    }
+
+    10% {
+        color: #cb7aed;
+    }
+
+    20% {
+        color: #8b41ab;
+    }
+
+    60% {
+        color: rgb(112, 29, 112);
+    }
+
+    90% {
+        color: #340a47;
+    }
+
+    100% {
+        color: black;
+    }
 }
 
 iframe {
     max-width: 100%;
     display: block;
+    margin: 0 auto;
 }
 
 /*
@@ -234,6 +281,11 @@ input:focus, textarea:focus {
         padding: 10px;
         justify-content: space-around;
         display: none;
+    }
+
+    #menu, #exit-menu {
+        font-family: var(--nav-font);
+        font-size: var(--nav-font-size);
     }
 
     nav li {
