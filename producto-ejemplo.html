@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Jardín Vertical</title>
+    <script src="https://kit.fontawesome.com/ad842319df.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
+    <script src="/js/menu.js"></script>
 </head>
 <body>
     <!-- Header estático y navegador para la página -->
     <header>
         <a href="/index.html"><h1>El Jardín Vertical</h1></a>
         <nav>
-            <ul class="nav">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/productos.html">Nuestros productos</a></li>
-                <li><a href="/contacto.html">Sobre nosotros</a></li>
+            <button id="menu" onclick="menu()">Menú <i class="fa-solid fa-bars"></i></button>
+            <ul id="nav">
+                <a href="/index.html"><li>Inicio</li></a>
+                <a href="/productos.html"><li>Nuestros productos</li></a>
+                <a href="/contacto.html"><li>Sobre nosotros</li></a>
+                <button onclick="exitMenu()"><li id="exit-menu">Salir <i class="fa-solid fa-xmark"></i></li></button>
             </ul>
         </nav>
     </header>
@@ -29,9 +33,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>Nos podes encontrar en: links con fontawesome a twitter e instagram idk</p>
+        <p>Nuestras redes: <a href="https://twitter.com/" aria-label="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a> <a href="https://www.instagram.com/" target="_blank" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></p>
         <p>Página creada por Florencia Allami. Contacto: <a href="mailto:allami.florencia@gmail.com">allami.florencia@gmail.com</a></p>
-        <p>Atención: los contenidos de esta página fueron hechos por motivos educaticos. Esta empresa no es real.</p>
+        <p>Los contenidos de esta página fueron hechos por motivos educativos. Esta empresa no es real.</p>
     </footer>
 
 </body>
