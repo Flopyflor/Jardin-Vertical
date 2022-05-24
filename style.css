@@ -9,7 +9,7 @@
 
 /* Común a todas las páginas */
 header {
-    background-color: #96e7bb;
+    background-color: #5adb76;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -63,12 +63,12 @@ nav a {
 }
 
 nav li:hover {
-    color:rgb(114, 21, 142);
-    background-color: #b8f7d4;
+    color:rgb(216, 14, 95);
+    background-color: #8ae687;
 }
 
 a {
-    color: #34014a;
+    color: rgb(154, 0, 69);;
 }
 
 footer {
@@ -77,16 +77,17 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #389f62;
+    background-color: #3a8e31;
     text-align: center;
 }
 
 main {
     background-color: rgb(247, 237, 243);
+    min-height: 75vh;
 }
 
 ::selection {
-    background-color: purple;
+    background-color: rgb(154, 0, 69);
     color: white;
 }
 
@@ -109,7 +110,7 @@ section {
 /* Página index */
 section#title-card {
     height: calc(100vh - var(--header-height));
-    background-color: rgb(220, 156, 240);
+    background-color: rgb(239, 150, 161);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -127,24 +128,12 @@ section#title-card {
         color: #00000000;
     }
 
-    10% {
-        color: #cb7aed;
-    }
-
-    20% {
-        color: #8b41ab;
-    }
-
-    60% {
-        color: rgb(112, 29, 112);
-    }
-
-    90% {
-        color: #340a47;
+    70% {
+        color: #e00a67;
     }
 
     100% {
-        color: black;
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -153,25 +142,20 @@ iframe {
     display: block;
     margin: 0 auto;
 }
-
-/*
-Tengo ganas de, usando nth-child, hacer que algunos info esten alineados a la derecha. maybe
-*/
-
 /* Contacto */
 
 form {
-    border: 3px solid rgb(160, 88, 171);
+    border: 3px solid rgb(211, 19, 90);
     border-radius: 5px;
     margin: 0px 20px;
     padding: 10px;
-    background-color: #dccaf4;
+    background-color: #fea4c8;
 }
 
 fieldset, legend {
     border-radius: 10px;
-    border: 3px solid rgb(120, 148, 137);
-    background-color: #caf5de;
+    border: 3px solid rgb(195, 66, 113);
+    background-color: #ffe3f0;
 }
 
 legend {
@@ -209,8 +193,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"], t
 
 input[type="submit"], input[type="reset"] {
     flex-grow: 1;
-    background-color: #cb7aed;
-    border: 2px solid rgb(106, 31, 139);
+    background-color: rgb(242, 51, 121);
+    border: 2px solid rgb(139, 31, 31);
     border-radius: 5px;
     padding: 5px;
 }
@@ -226,6 +210,7 @@ input:focus, textarea:focus {
     background-color: #ffffff;
     border-radius: 10px;
     width: 100%;
+    height: 100%;
     transition: transform 0.5s, background-color 0.5s;
     color: black;
     text-decoration: none;
@@ -259,6 +244,7 @@ input:focus, textarea:focus {
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content;
     gap: 30px 20px;
 }
 
@@ -269,23 +255,36 @@ input:focus, textarea:focus {
     }    
 }
 @media (max-width:900px) {
+    * {
+        --header-height: 4em;
+    }
+
     #nav {
         flex-flow: column;
         position: fixed;
         margin: 0 auto;
         left: 0;
-        top: 0;
+        top: -10px;
         width: 100vw;
-        height: 100vh;
+        height: 0vh;
         background-color: purple;
         padding: 10px;
         justify-content: space-around;
         display: none;
+        transition: height .5s, top .5s;
+        overflow: hidden;
     }
 
     #menu, #exit-menu {
         font-family: var(--nav-font);
         font-size: var(--nav-font-size);
+    }
+
+    #exit-menu {
+        align-self: end;
+        width: auto;
+        height: auto;
+        padding: 5px;
     }
 
     nav li {
@@ -318,21 +317,32 @@ input:focus, textarea:focus {
     .product-grid {
         grid-template-columns: 1fr;
     }
+
+    .info {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 420px) {
-    form p, input {
-        margin: 0;
+    * {
+        --header-height: 3em;
+    }
+    .info p {
+        margin: 10px 0;
         padding: 0;
     }
 
-    header {
-        flex: column;
-        justify-content: center;
+    header h1 {
+        font-size: 1.5em;
     }
 
     .product-grid {
-        margin: 0;
+        margin: 20px 0;
         padding: 0;
+        column-gap: 0;
+    }
+
+    .product-card:hover {
+        transform: none;
     }
 }

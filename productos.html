@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Jardín Vertical</title>
     <script src="https://kit.fontawesome.com/ad842319df.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/TPO_CAC/style.css">
-    <script src="/TPO_CAC/js/menu.js"></script>
-    <link rel="icon" type="image/x-image" href="/TPO_CAC/favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/menu.js"></script>
+    <link rel="icon" type="image/x-image" href="/favicon_io/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet"> 
@@ -16,16 +16,18 @@
 <body>
     <!-- Header estático y navegador para la página -->
     <header>
-        <a href="/TPO_CAC/index.html"><h1>El Jardín Vertical</h1></a>
-        <nav>
-            <button id="menu" onclick="menu()">Menú <i class="fa-solid fa-bars"></i></button>
-            <ul id="nav">
-                <a href="/TPO_CAC/index.html"><li>Inicio</li></a>
-                <a href="/TPO_CAC/productos.html"><li>Nuestros productos</li></a>
-                <a href="/TPO_CAC/contacto.html"><li>Sobre nosotros</li></a>
-                <button onclick="exitMenu()"><li id="exit-menu">Salir <i class="fa-solid fa-xmark"></i></li></button>
-            </ul>
-        </nav>
+        <a href="/index.html">
+            <h1>El Jardín Vertical</h1>
+        </a>
+    <nav>
+        <button id="menu" onclick="menu()" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
+        <ul id="nav">
+            <button onclick="exitMenu()" id="exit-menu" aria-label="Salir"><li><i class="fa-solid fa-xmark"></i></li></button>
+            <a href="/index.html"><li>Inicio</li></a>
+            <a href="/productos.html"><li>Nuestros productos</li></a>
+            <a href="/contacto.html"><li>Sobre nosotros</li></a>
+        </ul>
+    </nav>
     </header>
 
     <main>
@@ -33,75 +35,67 @@
             <h2>Nuestros productos</h2>
 
             <div class="product-grid">
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_145936.jpg" alt="">
+                        <img src="/imgs/20220510_145936.jpg" alt="">
                         <h3>Anturio</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <p>Esta planta de interior prefiere la semisombre y requiere agua todos los días.</p>
                     </div>
                 </a>
                 
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_150119.jpg" alt="">
+                        <img src="/imgs/20220510_150119.jpg" alt="">
                         <h3>Cretona</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <p>Esta planta prefiere sol directo, así que un buen balcón puede beneficiarla. Necesita agua cada tres días.</p>
                     </div>
                 </a>
                 
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_150329.jpg" alt="">
+                        <img src="/imgs/20220510_150329.jpg" alt="">
                         <h3>Violeta de los Alpes</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <p>Esta planta de interior prefiere la semisombre y requiere agua cada 2 días.</p>
                     </div>
                 </a>
                 
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_150434-ver.jpg" alt="">
+                        <img src="/imgs/20220510_150434-ver.jpg" alt="">
                         <h3>Aglaonema</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <p>Esta planta de interior prefiere la sombra y requiere agua una vez a la semana. Es muy fácil de cuidar, y perfecta para principiantes.</p>
                     </div>
                 </a>
                 
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_150633.jpg" alt="">
-                        <h3>!!!</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <img src="/imgs/20220510_150633.jpg" alt="">
+                        <h3>Tradescantia</h3>
+                        <p>Esta planta prefiere sol directo, y no puede estar en el interior. Necesita agua cada tres días. Es un poco más demandante, y necesita buena tierra.</p>
                     </div>
                 </a>
                 
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_150750.jpg" alt="">
-                        <h3>!!!</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <img src="/imgs/20220510_150750.jpg" alt="">
+                        <h3>Aphelanda</h3>
+                        <p>Esta es una planta de semisombra, que prefiere ambientes húmedos. Aún así, puede ser regada cada tres días, excepto en verano, cuando es mejor regarla todos los días.</p>
                     </div>
                 </a>
                 
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_151149.jpg" alt="">
+                        <img src="/imgs/20220510_151149.jpg" alt="">
                         <h3>Potus</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <p>Esta es una planta fácil de cuidar. Con sol indirecto y agua una vez a la semana, esta planta crece bien.</p>
                     </div>
                 </a>
                 
-                <a href="/TPO_CAC/producto-ejemplo.html">
+                <a href="/producto-ejemplo.html">
                     <div class="product-card">
-                        <img src="/TPO_CAC/imgs/20220510_151052.jpg" alt="">
+                        <img src="/imgs/20220510_151052.jpg" alt="">
                         <h3>Malvón</h3>
-                        <p>Descripción del producto.</p>
-                        <p>más descripcion</p>
+                        <p>Esta es una planta fácil de cuidar. Con sol indirecto y agua una vez a la semana, esta planta crece bien.</p>
                     </div>
                 </a>
                 
