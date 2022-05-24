@@ -67,8 +67,20 @@ nav li:hover {
     background-color: #8ae687;
 }
 
-a {
-    color: rgb(154, 0, 69);;
+main a {
+    color: rgb(237, 98, 163);;
+}
+
+main a:visited {
+    color:rgb(211, 19, 90);
+}
+
+footer a {
+    color:rgb(211, 19, 90);
+}
+
+footer a:visited {
+    color:rgb(144, 13, 61);
 }
 
 footer {
@@ -281,8 +293,20 @@ input:focus, textarea:focus {
         font-size: var(--nav-font-size);
     }
 
+    #exit-menu {
+        position: fixed;
+        top: -50px;
+        right: 20px;
+        transition: top .5s;
+    }
+
     nav li {
         text-align: center;
+    }
+
+    nav li:hover {
+        color:rgb(216, 14, 95);
+        background-color: #80ffb1;
     }
 
     .product-grid {
