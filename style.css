@@ -267,24 +267,18 @@ input:focus, textarea:focus {
         top: -10px;
         width: 100vw;
         height: 0vh;
-        background-color: purple;
+        background-color: rgb(238, 57, 163);
         padding: 10px;
         justify-content: space-around;
         display: none;
         transition: height .5s, top .5s;
         overflow: hidden;
+        font-size: 1rem;
     }
 
     #menu, #exit-menu {
         font-family: var(--nav-font);
         font-size: var(--nav-font-size);
-    }
-
-    #exit-menu {
-        align-self: end;
-        width: auto;
-        height: auto;
-        padding: 5px;
     }
 
     nav li {
