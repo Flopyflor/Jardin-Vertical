@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Jardín Vertical</title>
+    <script src="https://kit.fontawesome.com/ad842319df.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+
+    <link rel="icon" type="image/x-image" href="{{ url_for('static', filename='/favicon_io/favicon-16x16.png') }}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- Header estático y navegador para la página -->
+    <header>
+        <a href="/">
+            <h1>El Jardín Vertical</h1>
+        </a>
+    <nav>
+        <button id="menu" onclick="menu()" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
+        <ul id="nav">
+            <button onclick="exitMenu()" id="exit-menu" aria-label="Salir"><i class="fa-solid fa-xmark"></i></button>
+            <a href="/"><li>Inicio</li></a>
+            <a href="/productos"><li>Nuestros productos</li></a>
+            <a href="/contacto"><li>Sobre nosotros</li></a>
+        </ul>
+    </nav>
+    </header>
