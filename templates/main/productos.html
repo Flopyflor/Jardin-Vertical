@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+
+    <main>
+        <section class="info">
+            <h2>Nuestros productos</h2>
+
+            <div class="product-grid">
+
+                {% for producto in productos %}
+
+                <a href="producto/{{ to_link(producto[0]) }}">
+                    <div class="product-card">
+                        <img src="/imgs/{{producto[3]}}" alt="">
+                        <h3>{{producto[0]}}</h3>
+                        <p>{{producto[1]}}</p>
+                    </div>
+                </a>
+
+                {% endfor %}
+            </div>
+        </section>
+        
+    </main>
+
+    {% include 'footer.html' %}
